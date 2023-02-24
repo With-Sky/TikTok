@@ -1,0 +1,27 @@
+[RZ-WORK-FLOW]2023/02/23 - 21:44:06.108	[31merror[0m	C:/Users/HK/Desktop/easy_tiktok/cmd/publish_service/handler.go:23	token contains an invalid number of segments
+[RZ-WORK-FLOW]2023/02/23 - 21:45:47.280	[31merror[0m	C:/Users/HK/Desktop/easy_tiktok/cmd/publish_service/handler.go:23	token contains an invalid number of segments
+[RZ-WORK-FLOW]2023/02/23 - 21:46:17.521	[31merror[0m	C:/Users/HK/Desktop/easy_tiktok/cmd/publish_service/handler.go:25	token contains an invalid number of segments
+[RZ-WORK-FLOW]2023/02/23 - 21:47:19.059	[31merror[0m	C:/Users/HK/Desktop/easy_tiktok/cmd/publish_service/handler.go:25	token contains an invalid number of segments
+[RZ-WORK-FLOW]2023/02/23 - 21:48:22.858	[31merror[0m	C:/Users/HK/Desktop/easy_tiktok/cmd/publish_service/handler.go:25	token contains an invalid number of segments
+[RZ-WORK-FLOW]2023/02/23 - 21:48:49.769	[31merror[0m	C:/Users/HK/Desktop/easy_tiktok/cmd/publish_service/handler.go:25	token contains an invalid number of segments
+[RZ-WORK-FLOW]2023/02/23 - 21:49:53.616	[31merror[0m	C:/Users/HK/Desktop/easy_tiktok/cmd/publish_service/handler.go:25	token contains an invalid number of segments
+[RZ-WORK-FLOW]2023/02/23 - 21:51:48.630	[31merror[0m	C:/Users/HK/Desktop/easy_tiktok/cmd/publish_service/handler.go:25	token contains an invalid number of segments
+[RZ-WORK-FLOW]2023/02/23 - 21:52:29.173	[31merror[0m	C:/Users/HK/Desktop/easy_tiktok/cmd/publish_service/handler.go:25	token contains an invalid number of segments
+[RZ-WORK-FLOW]2023/02/23 - 21:53:36.519	[31merror[0m	C:/Users/HK/Desktop/easy_tiktok/cmd/publish_service/handler.go:25	token contains an invalid number of segments
+[RZ-WORK-FLOW]2023/02/23 - 22:08:37.857	[31merror[0m	C:/Users/HK/Desktop/easy_tiktok/cmd/publish_service/handler.go:33	标题为空
+[RZ-WORK-FLOW]2023/02/23 - 22:09:08.540	[34minfo[0m	C:/Users/HK/Desktop/easy_tiktok/pkg/utils/upload/ftp_utils.go:36	登录成功
+[RZ-WORK-FLOW]2023/02/23 - 22:09:09.738	[34minfo[0m	C:/Users/HK/Desktop/easy_tiktok/pkg/utils/upload/ftp_utils.go:62	上传成功，路径：1360791b-3761-470f-b50b-2d80e6eeb6bc/9d866b18-efd0-4569-b79c-e50d41c8fd98.mp4
+[RZ-WORK-FLOW]2023/02/23 - 22:09:11.438	[34minfo[0m	C:/Users/HK/Desktop/easy_tiktok/pkg/utils/upload/ftp_utils.go:36	登录成功
+[RZ-WORK-FLOW]2023/02/23 - 22:09:11.890	[34minfo[0m	C:/Users/HK/Desktop/easy_tiktok/pkg/utils/upload/ftp_utils.go:62	上传成功，路径：3f9ccd58-8d72-4149-9bce-c7dea877e13c/602cad2a-367e-49f6-bd3c-a3c6a459df64.jpg
+[RZ-WORK-FLOW]2023/02/23 - 22:10:27.415	[31merror[0m	C:/Users/HK/Desktop/easy_tiktok/cmd/publish_service/handler.go:71	未登录或者登录过期
+[RZ-WORK-FLOW]2023/02/23 - 22:10:33.693	[31merror[0m	C:/Users/HK/Desktop/easy_tiktok/cmd/publish_service/handler.go:71	未登录或者登录过期
+[RZ-WORK-FLOW]2023/02/23 - 22:17:40.266	[31merror[0m	C:/Users/HK/Desktop/easy_tiktok/cmd/publish_service/handler.go:71	未登录或者登录过期
+[RZ-WORK-FLOW]2023/02/23 - 22:17:46.715	[31merror[0m	C:/Users/HK/Desktop/easy_tiktok/cmd/publish_service/handler.go:71	未登录或者登录过期
+[RZ-WORK-FLOW]2023/02/23 - 22:18:32.664	[31merror[0m	C:/Users/HK/Desktop/easy_tiktok/cmd/publish_service/handler.go:71	未登录或者登录过期
+[RZ-WORK-FLOW]2023/02/23 - 22:18:35.273	[31merror[0m	C:/Users/HK/Desktop/easy_tiktok/cmd/publish_service/handler.go:71	未登录或者登录过期
+[RZ-WORK-FLOW]2023/02/23 - 22:18:38.920	[31merror[0m	C:/Users/HK/Desktop/easy_tiktok/cmd/publish_service/handler.go:71	未登录或者登录过期
+[RZ-WORK-FLOW]2023/02/23 - 22:18:42.374	[31merror[0m	C:/Users/HK/Desktop/easy_tiktok/cmd/publish_service/handler.go:71	未登录或者登录过期
+[RZ-WORK-FLOW]2023/02/23 - 22:18:46.452	[31merror[0m	C:/Users/HK/Desktop/easy_tiktok/cmd/publish_service/handler.go:71	未登录或者登录过期
+[RZ-WORK-FLOW]2023/02/23 - 22:18:48.430	[31merror[0m	C:/Users/HK/Desktop/easy_tiktok/cmd/publish_service/handler.go:71	未登录或者登录过期
+[RZ-WORK-FLOW]2023/02/23 - 22:31:53.280	[31merror[0m	C:/Users/HK/Desktop/easy_tiktok/cmd/publish_service/handler.go:71	未登录或者登录过期
+[RZ-WORK-FLOW]2023/02/23 - 22:33:09.500	[31merror[0m	C:/Users/HK/Desktop/easy_tiktok/cmd/publish_service/handler.go:71	未登录或者登录过期

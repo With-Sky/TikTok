@@ -1,0 +1,13 @@
+2023/02/10 - 00:18:15.676	info	redis connect ping response:	{"pong": "PONG"}
+2023/02/10 - 01:26:34.432	info	redis connect ping response:	{"pong": "PONG"}
+2023/02/10 - 09:54:34.993	info	redis connect ping response:	{"pong": "PONG"}
+2023/02/10 - 09:55:10.248	info	redis connect ping response:	{"pong": "PONG"}
+2023/02/10 - 14:28:46.010	error	redis connect ping failed, err:	{"err": "dial tcp [::1]:6379: connectex: No connection could be made because the target machine actively refused it."}
+2023/02/10 - 14:29:40.323	error	redis connect ping failed, err:	{"err": "dial tcp [::1]:6379: connectex: No connection could be made because the target machine actively refused it."}
+2023/02/10 - 14:30:25.139	error	redis connect ping failed, err:	{"err": "dial tcp [::1]:6379: connectex: No connection could be made because the target machine actively refused it."}
+2023/02/10 - 14:32:02.145	error	redis connect ping failed, err:	{"err": "dial tcp [::1]:6379: connectex: No connection could be made because the target machine actively refused it."}
+2023/02/10 - 14:34:14.361	error	redis connect ping failed, err:	{"err": "dial tcp [::1]:6379: connectex: No connection could be made because the target machine actively refused it."}
+2023/02/10 - 14:34:50.382	error	redis connect ping failed, err:	{"err": "dial tcp [::1]:6379: connectex: No connection could be made because the target machine actively refused it."}
+2023/02/10 - 16:54:51.008	error	redis connect ping failed, err:	{"err": "dial tcp [::1]:6379: connectex: No connection could be made because the target machine actively refused it."}
+2023/02/10 - 16:55:42.897	error	redis connect ping failed, err:	{"err": "dial tcp [::1]:6379: connectex: No connection could be made because the target machine actively refused it."}
+2023/02/10 - 17:29:49.652	error	redis connect ping failed, err:	{"err": "dial tcp [::1]:6379: connectex: No connection could be made because the target machine actively refused it."}

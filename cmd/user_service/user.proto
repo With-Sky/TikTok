@@ -1,0 +1,56 @@
+syntax = "proto3";
+package user;
+option go_package = "user";
+
+message BaseResp {
+    int32 status_code = 1;//状态码
+	  string status_message = 2;//状态描述
+	  int64 service_time = 3;//服务时间
+}
+
+message User {
+    int64 id = 1;//用户id
+    string name = 2;//用户名称
+    int64 follow_count = 3;//关注总数
+    int64 follower_count = 4;//粉丝总数
+    bool is_follow = 5;//true-已关注,false-未关注
+}
+
+message LoginReq {
+    string username = 1; //登录用户名
+    string password = 2;//登录密码
+}
+
+message LoginRes {
+    BaseResp base_resp = 1;
+    int64 user_id = 2;//用户id
+    string token = 3;//token
+}
+
+message RegisterReq{
+    string username = 1;//注册用户名，最长32个字符
+    string password = 2;//密码，最长32个字符
+}
+
+message RegisterRes {
+    BaseResp base_resp = 1;
+    int64 user_id = 2;//用户id
+    string token = 3;//用户鉴权token
+}
+
+
+message UserInfoReq {
+    int64 user_id = 1;//用户id
+    string token = 2;//用户鉴权token
+}
+
+message UserInfoRes {
+    BaseResp base_resp = 1;
+    User user = 2;//用户信息
+}
+
+service UserService {
+	  rpc Login (LoginReq) returns (LoginRes) {}
+    rpc Register (RegisterReq) returns (RegisterRes) {}
+    rpc UserInfo (UserInfoReq) returns (UserInfoRes) {}
+}

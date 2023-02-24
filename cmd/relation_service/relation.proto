@@ -1,0 +1,68 @@
+syntax = "proto3";
+package relation;
+option go_package = "relation";
+
+message BaseResp {
+	  int32 status_code = 1;//状态码
+	  string status_message = 2;//状态描述
+	  int64 service_time = 3;//服务时间
+}
+
+message User {
+    int64 id = 1;//用户id
+    string name = 2;//用户名称
+    int64 follow_count = 3;//关注总数
+    int64 follower_count = 4;//粉丝总数
+    bool is_follow = 5;//true-已关注,false-未关注
+}
+
+
+message FollowReq {
+    string token = 1;//用户鉴权token
+    int64 to_user_id = 2;//对方用户id
+}
+
+message FollowRes {
+    BaseResp base_resp = 1;
+}
+message CancelFollowReq{
+    string token = 1;//用户鉴权token
+    int64 to_user_id = 2;//对方用户id
+}
+message CancelFollowRes{
+    BaseResp base_resp = 1;
+}
+message FollowListReq {
+    int64 user_id = 1;//用户id
+    string token = 2;//用户鉴权token
+}
+
+message FollowListRes {
+    BaseResp base_resp = 1;
+    repeated User user_list = 2;//用户信息列表
+}
+
+message FollowerListReq {
+    int64 user_id = 1;//用户id
+    string token = 2;//用户鉴权token
+}
+
+message FollowerListRes {
+    BaseResp base_resp = 1;
+    repeated User user_list = 2;//用户列表
+}
+message FriendListReq{
+    int64 user_id = 1;//用户id
+    string token = 2;//用户鉴权token
+}
+message FriendListRes{
+    BaseResp base_resp = 1;
+    repeated User user_list = 2;//用户列表
+}
+service RelationService {
+	  rpc Follow (FollowReq) returns (FollowRes) {}
+    rpc CancelFollow(CancelFollowReq) returns (CancelFollowRes){}
+    rpc FollowList (FollowListReq) returns (FollowListRes) {}
+    rpc FollowerList (FollowerListReq) returns (FollowerListRes ) {}
+    rpc FriendList (FriendListReq) returns (FriendListRes) {}
+}

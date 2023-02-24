@@ -1,0 +1,6 @@
+[RZ-WORK-FLOW]2023/02/24 - 07:54:52.950	[31merror[0m	C:/Users/withsky/Desktop/programs/golang/easy_tiktok(2)/easy_tiktok/cmd/feed_service/service/feed.go:75	token contains an invalid number of segments
+[RZ-WORK-FLOW]2023/02/24 - 07:54:52.952	[31merror[0m	C:/Users/withsky/Desktop/programs/golang/easy_tiktok(2)/easy_tiktok/cmd/feed_service/handler.go:27	获取视频失败
+[RZ-WORK-FLOW]2023/02/24 - 11:18:26.575	[34minfo[0m	C:/Users/withsky/Desktop/programs/golang/easy_tiktok(2)/easy_tiktok/cmd/feed_service/service/feed.go:151	视频长度
+[RZ-WORK-FLOW]2023/02/24 - 11:23:22.913	[34minfo[0m	C:/Users/withsky/Desktop/programs/golang/easy_tiktok(2)/easy_tiktok/cmd/feed_service/service/feed.go:158	视频长度
+[RZ-WORK-FLOW]2023/02/24 - 11:23:58.105	[34minfo[0m	C:/Users/withsky/Desktop/programs/golang/easy_tiktok(2)/easy_tiktok/cmd/feed_service/service/feed.go:158	视频长度
+[RZ-WORK-FLOW]2023/02/24 - 11:24:10.642	[34minfo[0m	C:/Users/withsky/Desktop/programs/golang/easy_tiktok(2)/easy_tiktok/cmd/feed_service/service/feed.go:158	视频长度
