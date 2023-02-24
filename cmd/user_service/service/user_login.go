@@ -12,7 +12,7 @@ import (
 
 func UserLogin(ctx context.Context, userName string, password string) (token string, userID int64, err error) {
 	global.LOG.Info("用户登录服务")
-	password, err = utils.Encrypt(password, []byte("kkkkkkkk"))
+	password, err = utils.Encrypt(password, []byte(global.Config.Viper.GetString("Password.key")))
 	if err != nil {
 		global.LOG.Error("密码错误")
 		err = errors.New("用户名或密码错误，请检查您输入的用户名或密码")

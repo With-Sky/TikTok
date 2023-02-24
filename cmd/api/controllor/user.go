@@ -2,6 +2,7 @@ package controllor
 
 import (
 	"context"
+	"encoding/json"
 	"errors"
 	"fmt"
 	"github.com/labstack/echo"
@@ -11,6 +12,7 @@ import (
 	"tiktok/cmd/api/rpc"
 	"tiktok/kitex_gen/user"
 	"tiktok/pkg/utils"
+	"time"
 )
 
 type OnlineUser struct {
@@ -114,17 +116,17 @@ func Login(con echo.Context) error {
 		global.LOG.Error(res.BaseResp.StatusMessage)
 		return err
 	}
-	//r:=utils.Redis(global.Config,global.LOG)
-	var onlineUser = OnlineUser{
-		Id:            res.UserId,
-		LoginTime:     utils.NowUnix(),
-		LoginLocation: utils.GetLocation(con.RealIP()),
-		Ip:            con.RealIP(),
-		Token:         res.Token,
-	}
+	r := utils.Redis(global.Config, global.LOG)
+	var onlineUser OnlineUser
+	onlineUser.Id = res.UserId
+	onlineUser.LoginTime = utils.NowUnix()
+	onlineUser.LoginLocation = utils.GetLocation(con.RealIP())
+	onlineUser.Ip = con.RealIP()
+	onlineUser.Token = res.Token
 	fmt.Println(onlineUser)
-	//s:=strconv.FormatInt(res.UserId,10)
-	//r.Set(context.Background(),s,onlineUser,time.Duration(global.Config.Viper.GetInt("JWT.ExpiresTime"))*time.Second*19)
+	onlineUserJ, err := json.Marshal(onlineUser)
+	s := strconv.FormatInt(res.UserId, 10)
+	r.Set(context.Background(), s, onlineUserJ, time.Duration(global.Config.Viper.GetInt("JWT.ExpiresTime"))*time.Second*19)
 	if err := con.JSON(http.StatusOK, res); err != nil {
 		FailWithMessage("响应失败", con)
 		return err
@@ -156,18 +158,25 @@ func UserInfo(con echo.Context) error {
 		UserId: uID,
 		Token:  userInfoReqData.Token,
 	}
+	s := strconv.FormatInt(userInfoReq.UserId, 10)
+	r := utils.Redis(global.Config, global.LOG)
+	userInfo, err := r.Get(context.Background(), s).Result()
+	var u = new(*user.UserInfoRes)
+	if err == nil {
+		err = json.Unmarshal([]byte(userInfo), &u)
+		if err != nil {
+			global.LOG.Error("token反序列化失败")
+			FailWithMessage("token反序列化失败", con)
+		}
+		if err := con.JSON(http.StatusOK, u); err != nil {
+			FailWithMessage("响应失败", con)
+			global.LOG.Error("响应失败")
+			return err
+		}
+	}
+
 	res, err := rpc.UserInfo(context.Background(), &userInfoReq)
-	//if res == nil {
-	//	FailWithMessage("服务请求失败", con)
-	//	global.LOG.Error("服务请求失败")
-	//	return err
-	//}
-	//if err != nil {
-	//	FailWithMessage(res.BaseResp.StatusMessage, con)
-	//	global.LOG.Error(res.BaseResp.StatusMessage)
-	//	return err
-	//}
-	//
+
 	if err := con.JSON(http.StatusOK, res); err != nil {
 		FailWithMessage("响应失败", con)
 		global.LOG.Error("响应失败")

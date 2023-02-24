@@ -40,10 +40,7 @@ func SendMessage(con echo.Context) error {
 func MessageList(con echo.Context) error {
 	fmt.Println("MessageList")
 	var messageChatParam MessageChatParam
-	//if err := con.Bind(&messageChatParam); err != nil {
-	//	global.LOG.Error(err.Error())
-	//	FailWithMessage("获取请求失败", con)
-	//}
+
 	messageChatParam.Token = con.FormValue("token")
 	messageChatParam.PreMsgTime, _ = strconv.ParseInt(con.FormValue("pre_msg_time"), 10, 64)
 	messageChatParam.ToUserId, _ = strconv.ParseInt(con.FormValue("to_user_id"), 10, 64)
@@ -79,12 +76,6 @@ func FriendList(con echo.Context) error {
 		global.LOG.Error("获取请求失败")
 	}
 
-	fmt.Println(friendListReqData)
-	//if err := utils.Verify(friendListReqData.UserID, utils.EmptyAppVerify); err != nil {
-	//	FailWithMessage("用户ID为空", con)
-	//	//global.LOG.Error("用户ID为空")
-	//	return err
-	//}
 	uID, err := strconv.ParseInt(friendListReqData.UserID, 10, 64)
 	if err != nil {
 		FailWithMessage("获取用户ID失败", con)

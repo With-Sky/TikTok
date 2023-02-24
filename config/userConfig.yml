@@ -19,7 +19,12 @@ JWT:
 Etcd:
   Address: "101.43.131.145."
   Port: 2379
-
+redis:
+  db: 1
+  addr: '127.0.0.1:6379'
+#  password: ''
+Password:
+  key: "xdream"
 Server:
   Name: "TiktokUserServer"
   Address: "127.0.0.1"
