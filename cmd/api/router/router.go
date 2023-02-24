@@ -11,9 +11,9 @@ func Router(e *echo.Echo) {
 
 	Router := e.Group("/douyin")
 	e.Use(middleware.Logger())
-	e.Use(middleware.CSRF())
+	//e.Use(middleware.CSRF())
 	e.Use(middleware.Recover())
-	e.Use(middleware.RequestID())
+	//e.Use(middleware.RequestID())
 	e.Use(middleware.Secure())
 	commentRouter := Router.Group("/comment")
 	commentRouter.GET("/list/", controllor.CommentList)

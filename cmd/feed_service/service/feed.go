@@ -196,7 +196,7 @@ func GetFeed(ctx context.Context, latestTime int64, token string) ([]*feed.Video
 	resp = make([]*feed.Video, videoLen)
 	for i := 0; i < videoLen; i++ {
 		resp[i] = &feed.Video{
-			Id: videoIdList[i],
+			Id: int64(videoDBList[i].ID),
 			Author: &feed.User{
 				Id:            userIDs[i],
 				Name:          userMap[userIDs[i]].Username,
@@ -212,5 +212,6 @@ func GetFeed(ctx context.Context, latestTime int64, token string) ([]*feed.Video
 			Title:         videoDBList[i].Title,
 		}
 	}
+	fmt.Println(videoDBList)
 	return resp, nextTime, err
 }
