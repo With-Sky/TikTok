@@ -63,7 +63,7 @@ func PublishList(con echo.Context) error {
 	uID, err := strconv.ParseInt(userID, 10, 64)
 	if err != nil {
 		FailWithMessage("获取对方用户ID失败", con)
-		global.LOG.Error("获取对方用户ID失败")
+		//global.LOG.Error("获取对方用户ID失败")
 		return err
 	}
 	fmt.Println(publishListReqData)

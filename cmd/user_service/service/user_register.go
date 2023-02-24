@@ -11,7 +11,7 @@ import (
 
 func UserRegister(ctx context.Context, userName string, password string) (token string, userID int64, err error) {
 	global.LOG.Info("用户注册服务")
-	password, err = utils.Encrypt(password, []byte(global.Config.Viper.GetString("Password.key")))
+	password, err = utils.Encrypt(password, []byte("kkkkkkkk"))
 	userModel := &db.User{
 		Model:         gorm.Model{},
 		Username:      userName,

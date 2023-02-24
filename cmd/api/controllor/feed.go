@@ -16,11 +16,12 @@ func FeedAction(con echo.Context) error {
 	// 从上下文获取请求
 	fmt.Println("Feed请求")
 	var feedRequestData FeedParam
-
+	//feedRequestData.Token=con.QueryParam("token")
+	//feedRequestData.LatestTime=con.QueryParam("latest_time")
 	fmt.Println(feedRequestData)
 	if err := con.Bind(&feedRequestData); err != nil {
 		FailWithMessage("获取请求失败", con)
-		global.LOG.Error("获取请求失败")
+		//global.LOG.Error("获取请求失败")
 		return err
 	}
 
@@ -30,7 +31,11 @@ func FeedAction(con echo.Context) error {
 		global.LOG.Error("获取latest_time失败")
 		return err
 	}
-
+	//if err := utils.Verify(lastTime, utils.EmptyAppVerify); err != nil {
+	//	FailWithMessage("latest_time为空", con)
+	//	//global.LOG.Error("latest_time为空")
+	//	return err
+	//}
 	//视频流服务的请求参数
 	feedReq := feed.FeedReq{
 		LatestTime: lastTime,
@@ -41,7 +46,7 @@ func FeedAction(con echo.Context) error {
 	res, err := rpc.Feed(context.Background(), &feedReq)
 	if res == nil {
 		FailWithMessage("服务请求失败", con)
-		global.LOG.Error("服务请求失败")
+		//global.LOG.Error("服务请求失败")
 		return err
 	}
 	if err != nil {
@@ -53,7 +58,7 @@ func FeedAction(con echo.Context) error {
 	// 返回响应
 	if err := con.JSON(http.StatusOK, res); err != nil {
 		FailWithMessage("响应失败", con)
-		global.LOG.Error("响应失败")
+		//global.LOG.Error("响应失败")
 		return err
 	}
 	return nil
