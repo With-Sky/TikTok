@@ -1,0 +1,4 @@
+[RZ-WORK-FLOW]2023/02/25 - 15:12:34.290	[34minfo[0m	C:/Users/withsky/Desktop/programs/golang/TikTok/cmd/favorite_service/main.go:43	test
+[RZ-WORK-FLOW]2023/02/25 - 15:23:55.099	[34minfo[0m	C:/Users/withsky/Desktop/programs/golang/TikTok/cmd/favorite_service/main.go:43	test
+[RZ-WORK-FLOW]2023/02/25 - 15:30:25.133	[34minfo[0m	C:/Users/withsky/Desktop/programs/golang/TikTok/cmd/favorite_service/handler.go:81	喜欢列表
+[RZ-WORK-FLOW]2023/02/25 - 15:30:25.272	[34minfo[0m	C:/Users/withsky/Desktop/programs/golang/TikTok/cmd/favorite_service/handler.go:102	取消点赞服务成功

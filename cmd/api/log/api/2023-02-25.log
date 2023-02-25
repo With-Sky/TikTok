@@ -2,3 +2,24 @@
 [RZ-WORK-FLOW]2023/02/25 - 15:10:30.619	[31merror[0m	C:/Users/withsky/Desktop/programs/golang/TikTok/cmd/api/main.go:41	+++++++++++++++++++++++
 [RZ-WORK-FLOW]2023/02/25 - 15:11:14.590	[34minfo[0m	C:/Users/withsky/Desktop/programs/golang/TikTok/cmd/api/rpc/init.go:15	成功初始化rpc
 [RZ-WORK-FLOW]2023/02/25 - 15:11:14.656	[31merror[0m	C:/Users/withsky/Desktop/programs/golang/TikTok/cmd/api/main.go:41	+++++++++++++++++++++++
+[RZ-WORK-FLOW]2023/02/25 - 15:23:10.465	[34minfo[0m	C:/Users/withsky/Desktop/programs/golang/TikTok/pkg/utils/redis.go:23	redis connect ping response:	{"pong": "PONG"}
+[RZ-WORK-FLOW]2023/02/25 - 15:23:10.466	[31merror[0m	C:/Users/withsky/Desktop/programs/golang/TikTok/pkg/middleware/jwt.go:63	token反序列化失败
+[RZ-WORK-FLOW]2023/02/25 - 15:23:10.466	[34minfo[0m	C:/Users/withsky/Desktop/programs/golang/TikTok/cmd/api/rpc/favorite.go:92	点赞列表rpc
+[RZ-WORK-FLOW]2023/02/25 - 15:23:10.469	[34minfo[0m	C:/Users/withsky/Desktop/programs/golang/TikTok/pkg/utils/redis.go:23	redis connect ping response:	{"pong": "PONG"}
+[RZ-WORK-FLOW]2023/02/25 - 15:23:10.469	[31merror[0m	C:/Users/withsky/Desktop/programs/golang/TikTok/pkg/middleware/jwt.go:63	token反序列化失败
+[RZ-WORK-FLOW]2023/02/25 - 15:23:10.522	[31merror[0m	C:/Users/withsky/Desktop/programs/golang/TikTok/cmd/api/controllor/publish.go:82	服务请求失败
+[RZ-WORK-FLOW]2023/02/25 - 15:24:56.692	[31merror[0m	C:/Users/withsky/Desktop/programs/golang/TikTok/cmd/api/controllor/comment.go:146	服务请求失败
+[RZ-WORK-FLOW]2023/02/25 - 15:24:56.965	[31merror[0m	C:/Users/withsky/Desktop/programs/golang/TikTok/cmd/api/controllor/comment.go:146	服务请求失败
+[RZ-WORK-FLOW]2023/02/25 - 15:29:56.448	[31merror[0m	C:/Users/withsky/Desktop/programs/golang/TikTok/cmd/api/controllor/comment.go:146	服务请求失败
+[RZ-WORK-FLOW]2023/02/25 - 15:30:25.079	[34minfo[0m	C:/Users/withsky/Desktop/programs/golang/TikTok/pkg/utils/redis.go:23	redis connect ping response:	{"pong": "PONG"}
+[RZ-WORK-FLOW]2023/02/25 - 15:30:25.080	[31merror[0m	C:/Users/withsky/Desktop/programs/golang/TikTok/pkg/middleware/jwt.go:63	token反序列化失败
+[RZ-WORK-FLOW]2023/02/25 - 15:30:25.080	[34minfo[0m	C:/Users/withsky/Desktop/programs/golang/TikTok/cmd/api/rpc/favorite.go:92	点赞列表rpc
+[RZ-WORK-FLOW]2023/02/25 - 15:30:25.082	[34minfo[0m	C:/Users/withsky/Desktop/programs/golang/TikTok/pkg/utils/redis.go:23	redis connect ping response:	{"pong": "PONG"}
+[RZ-WORK-FLOW]2023/02/25 - 15:30:25.083	[31merror[0m	C:/Users/withsky/Desktop/programs/golang/TikTok/pkg/middleware/jwt.go:63	token反序列化失败
+[RZ-WORK-FLOW]2023/02/25 - 15:30:36.873	[34minfo[0m	C:/Users/withsky/Desktop/programs/golang/TikTok/pkg/utils/redis.go:23	redis connect ping response:	{"pong": "PONG"}
+[RZ-WORK-FLOW]2023/02/25 - 15:30:36.873	[34minfo[0m	C:/Users/withsky/Desktop/programs/golang/TikTok/pkg/utils/redis.go:23	redis connect ping response:	{"pong": "PONG"}
+[RZ-WORK-FLOW]2023/02/25 - 15:30:36.873	[31merror[0m	C:/Users/withsky/Desktop/programs/golang/TikTok/pkg/middleware/jwt.go:63	token反序列化失败
+[RZ-WORK-FLOW]2023/02/25 - 15:30:36.873	[34minfo[0m	C:/Users/withsky/Desktop/programs/golang/TikTok/cmd/api/rpc/favorite.go:92	点赞列表rpc
+[RZ-WORK-FLOW]2023/02/25 - 15:30:36.874	[31merror[0m	C:/Users/withsky/Desktop/programs/golang/TikTok/pkg/middleware/jwt.go:63	token反序列化失败
+[RZ-WORK-FLOW]2023/02/25 - 15:30:36.875	[31merror[0m	C:/Users/withsky/Desktop/programs/golang/TikTok/cmd/api/controllor/publish.go:82	服务请求失败
+[RZ-WORK-FLOW]2023/02/25 - 15:30:38.779	[31merror[0m	C:/Users/withsky/Desktop/programs/golang/TikTok/cmd/api/controllor/comment.go:146	服务请求失败

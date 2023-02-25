@@ -30,7 +30,10 @@ func CommentList(ctx context.Context, thisUserID int64, videoID int64) (commentL
 		commentList = nil
 		return
 	}
-
+	userMap := make(map[int64]db.User)
+	for _, j := range userList {
+		userMap[int64(j.ID)] = j
+	}
 	//查询本人的关系列表
 	myFollowDBList, err := db.GetRelationList(ctx, thisUserID)
 	if err != nil {
@@ -53,11 +56,11 @@ func CommentList(ctx context.Context, thisUserID int64, videoID int64) (commentL
 		commentList[i] = &comment.Comment{
 			Id: int64(commentDBList[i].ID),
 			User: &comment.User{
-				Id:            int64(userList[i].ID),
-				Name:          userList[i].Username,
-				FollowCount:   userList[i].FollowCount,
-				FollowerCount: userList[i].FollowerCount,
-				IsFollow:      myFollowMap[int64(userList[i].ID)],
+				Id:            userIDs[i],
+				Name:          userMap[userIDs[i]].Username,
+				FollowCount:   userMap[userIDs[i]].FollowCount,
+				FollowerCount: userMap[userIDs[i]].FollowerCount,
+				IsFollow:      myFollowMap[userIDs[i]],
 			},
 			Content:    commentDBList[i].CommentText,
 			CreateDate: utils.TimeToFormatData(commentDBList[i].CreatedAt),
