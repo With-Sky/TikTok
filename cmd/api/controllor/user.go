@@ -2,6 +2,7 @@ package controllor
 
 import (
 	"context"
+	"encoding/json"
 	"errors"
 	"fmt"
 	"github.com/labstack/echo"
@@ -11,6 +12,7 @@ import (
 	"tiktok/cmd/api/rpc"
 	"tiktok/kitex_gen/user"
 	"tiktok/pkg/utils"
+	"time"
 )
 
 type OnlineUser struct {
@@ -114,15 +116,17 @@ func Login(con echo.Context) error {
 		global.LOG.Error(res.BaseResp.StatusMessage)
 		return err
 	}
-	//r:=utils.Redis(global.Config,global.LOG)
-	var onlineUser = OnlineUser{
-		Id:            res.UserId,
-		LoginTime:     utils.NowUnix(),
-		LoginLocation: utils.GetLocation(con.RealIP()),
-		Ip:            con.RealIP(),
-		Token:         res.Token,
-	}
-	fmt.Println(onlineUser)
+	r := utils.Redis(global.Config, global.LOG)
+	var onlineUser OnlineUser
+	onlineUser.Id = res.UserId
+	onlineUser.LoginTime = utils.NowUnix()
+	onlineUser.LoginLocation = utils.GetLocation(con.RealIP())
+	onlineUser.Ip = con.RealIP()
+	onlineUser.Token = res.Token
+	onlineUserJ, err := json.Marshal(onlineUser)
+	s := strconv.FormatInt(res.UserId, 10)
+	err = r.Set(context.Background(), s, onlineUserJ, time.Duration(global.Config.Viper.GetInt("JWT.ExpiresTime"))*time.Second*19).Err()
+	fmt.Println(err)
 	//s:=strconv.FormatInt(res.UserId,10)
 	//r.Set(context.Background(),s,onlineUser,time.Duration(global.Config.Viper.GetInt("JWT.ExpiresTime"))*time.Second*19)
 	if err := con.JSON(http.StatusOK, res); err != nil {
